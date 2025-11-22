@@ -9,4 +9,4 @@ TECHNICAL REQUIREMENTS FOR CODE GENERATION:
 - MUST use Tailwind CSS for styling
 - MUST be a single page.tsx file
 - MUST include proper TypeScript types
-- MUST include GSAP cleanup in useEffect
+- MUST include GSAP cleanup in useEffet

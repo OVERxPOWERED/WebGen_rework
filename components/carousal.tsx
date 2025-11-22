@@ -11,7 +11,7 @@ export default function Carousal() {
   const cursor = ["pointer", "pointer", "default", "pointer", "pointer"];
   const opacity = [0, 1, 1, 1, 0];
   const bgImages = [
-    "/template_1.png",
+    "/Template_1.png",
     "/template_2.png",
     "/template_3.png",
     "/template_4.png",

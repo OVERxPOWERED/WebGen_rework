@@ -73,6 +73,7 @@ export async function POST(req: Request) {
     // Upload to Vercel Blob Storage instead of filesystem
     const blob = await put(`components/${filename}`, codeString, {
       access: 'public',
+      allowOverwrite:true,
     });
 
     console.log(`File saved successfully to blob: ${blob.url}`);

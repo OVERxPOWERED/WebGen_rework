@@ -11,11 +11,11 @@ export default function Carousal() {
   const cursor = ["pointer", "pointer", "default", "pointer", "pointer"];
   const opacity = [0, 1, 1, 1, 0];
   const bgImages = [
-    "/Template_1.png",
-    "/Template_2.png",
-    "/Template_3.png",
-    "/Template_4.png",
-    "/Template_6.png",
+    "/template_1.png",
+    "/template_2.png",
+    "/template_3.png",
+    "/template_4.png",
+    "/template_6.png",
   ];
 
   const prev = useRef<HTMLButtonElement>(null);

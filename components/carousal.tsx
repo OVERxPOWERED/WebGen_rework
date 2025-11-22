@@ -157,7 +157,7 @@ export default function Carousal() {
                 filter: `brightness(${bright[idx]})`,
                 opacity: opacity[idx],
                 backgroundImage: `url(${
-                  bgImages[k + 1] || "/Template_10.png"
+                  bgImages[k]
                 })`,
                 backgroundSize: `cover`,
               }}

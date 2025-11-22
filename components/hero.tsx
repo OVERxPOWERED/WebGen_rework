@@ -1,5 +1,6 @@
 "use client";
 import { redirect } from "next/navigation";
+import { Session } from "next-auth";
 import React, { useState, useEffect } from "react";
 
 export default function Hero() {
@@ -10,18 +11,22 @@ export default function Hero() {
   useEffect(() => {
     function handleFadeIn() {
       setTop(0);
-      setOpacity(1)
+      setOpacity(1);
     }
     window.addEventListener("load", handleFadeIn);
   }, []);
 
-  const handleGetStartedButton = () => redirect("/userPref");
-
+  const handleGetStartedButton = () => 
+    // if(!Session){
+    //   redirect("")
+    // }
+    redirect("/userPref")
+  ;
   return (
     <div
       style={{
         top: `${top}px`,
-        opacity: `${opacity}`
+        opacity: `${opacity}`,
       }}
       className={`h-[70vh] w-full flex flex-col justify-center items-center relative transition-all duration-1000 ease z-4`}
     >

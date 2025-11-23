@@ -4,7 +4,7 @@ import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import { Bell } from "lucide-react";
 import SignOutButton from "./signOutButton";
-import { useRouter } from "next/navigation";
+import { useRouter, redirect } from "next/navigation";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
@@ -167,7 +167,9 @@ export default function Navbar() {
         <button 
         className=""
         onClick={handleLogin}>Sign In</button>
-      <div className=" absolute right-2 flex justify-center items-center bg-white text-black whitespace-nowrap py-6 px-8">
+      <div
+      onClick={() => redirect("/userPref")}
+      className=" absolute right-2 flex justify-center items-center bg-transparent text-white whitespace-nowrap py-5 px-8 cursor-pointer hover:shadow-[0px_0px_15px_rgba(255,255,255,0.5)] transition-shadow duration-300">
         GET STARTED
       </div>
       </div>
